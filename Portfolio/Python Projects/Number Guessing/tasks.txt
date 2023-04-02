@@ -1,0 +1,3 @@
+1. User selects a range (A - B for example)
+2. Random integer will be selected from range
+3. User has to guess integer with a minimum number of guesses
