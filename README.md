@@ -1,7 +1,7 @@
 # Portfolio 
   This project will be using
   <br>
-  **React JS, Three JS, Tailwind CSS**
+  **React JS: https://react.dev/ <br> Three JS: https://threejs.org/ <br> Tailwind CSS: https://tailwindcss.com/docs/**
   <br>
   <br>
   We will also install the following packages
