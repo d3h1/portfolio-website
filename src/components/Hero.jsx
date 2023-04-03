@@ -28,7 +28,7 @@ const Hero = () => {
         <a href="#about">
           <div className='w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2'>
             {/* This is how we use framer motion to create a scrolling gif for users to go to the next page */}
-            <motion.dev 
+            <motion.div 
               animate={{
                 y: [0, 24, 0]
               }}
