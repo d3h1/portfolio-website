@@ -4,22 +4,54 @@ import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
 import CanvasLoader from '../Loader';
 
 // This will use three js
-const Computers = () => {
+const Computers = ({ isMobile }) => {
   const computer = useGLTF('./space/scene.gltf')
 
   return (
     <mesh>
       <hemisphereLight intensity={0.15} groundColor="black"/>
       <pointLight intensity={1} />
+      <spotLight
+        position={[-20, 50, 10]}
+        angle={0.12}
+        penumbra={1}
+        intensity={1}
+        castShadow
+        shadow-mapSize={1024}
+        />
       <primitive object={computer.scene}
-      scale={4}
-      position={[-8, -7.25, -1.5]}
+      scale={isMobile ? 2.5: 3.5}
+      position={isMobile ? [-4.5, -4.25, -1.5] :  [-5.75, -6.25, -1.5]}
       rotation={[1, -0.2, -0.1]} />
     </mesh>
   )
 }
 
 const ComputersCanvas = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Changing the is mobile variable
+  useEffect(() => {
+    // Add event listener for changing screen size
+    const mediaQuery = window.matchMedia('(max-width:643px)');
+
+    // Initial value of 'isMobile' state variable
+    setIsMobile(mediaQuery.matches);
+    
+    // Defining a callback function to handle changes within the media query
+    const handleMediaQueryChange = (event) => {
+      setIsMobile(event.matches);
+    };
+
+    // Adding a callback function to listen for changes to the media query
+    mediaQuery.addEventListener('change', handleMediaQueryChange);
+
+    // Remove listener when component is unmounted
+    return () => {
+      mediaQuery.removeEventListener('change', handleMediaQueryChange);
+    };
+  }, []);
+
   return (
     // Canvas will allow us to draw our 3-D model --- each one of these is needed to display the model you wanna see
     <Canvas 
@@ -28,14 +60,14 @@ const ComputersCanvas = () => {
     camera={{position: [17, 10, 5], fov: 40}}
     gl={{ preserveDrawingBuffer: true }}>
       {/* Suspense will load the canvas with the saved properties */}
-      <Suspense>
+      <Suspense fallback={<CanvasLoader />}>
         <OrbitControls 
         // Does not allow zoom, and allows rotating at a certain point
         enableZoom={false} 
         maxPolarAngle={Math.PI / 2}
         minPolarAngle={Math.PI / 2}
         />
-        <Computers />
+        <Computers isMobile={isMobile} />
       </Suspense>
       <Preload all />
     </Canvas>
