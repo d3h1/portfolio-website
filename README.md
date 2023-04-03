@@ -13,5 +13,6 @@
   react-vertical-timeline-component 
   @emailjs/browser 
   framer-motion 
-  react-router-dom` `
+  react-router-dom`
+  postcss autoprefixer`
 
