@@ -8,6 +8,7 @@ import { experiences } from '../constants';
 import { SectionWrapper } from '../hoc';
 import { textVariant } from "../utils/motion";
 
+// We are using () as our return because it is a instant|direct return
 const ExperienceCard = ({ experience }) => (
   <VerticalTimelineElement
     contentStyle={{ background: '#1d1836', color: '#fff' }}
@@ -15,11 +16,13 @@ const ExperienceCard = ({ experience }) => (
     date = {experience.date}
     iconStyle={{ background: experience.iconBg }}
     icon={
+      // Dynamically calling different experiences so I can always change it
       <div className="flex justify-center items-center w-full h-full">
         <img src={experience.icon} alt={experience.company_name} className="w-[60%] h-[60%] object-contain"/>
       </div>
     }
   >
+    {/* Continue to dynamically call different things for experiences */}
     <div className="text-white text-[24px] font-bold">
       <h3>{experience.title}</h3>
       <p className="text-secondary text-[16px] font-semibold" style={{ margin: 0 }}>{experience.company_name}</p>
@@ -38,6 +41,7 @@ const ExperienceCard = ({ experience }) => (
 const Experience = () => {
   return (
     <>
+    {/* Our initial title and more for the page*/}
       <motion.div variants={textVariant()}>
       <p className={styles.sectionSubText}>What I Have Done</p>
         <h2 className={styles.sectionHeadText}>Work Experience</h2>
