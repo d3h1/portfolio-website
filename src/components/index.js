@@ -1,4 +1,4 @@
-import { ModelCanvas, BallCanvas, ComputersCanvas, RandomBackgroundCanvas } from './canvas';
+import { ModelCanvas, BallCanvas, HeroModelCanvas, RandomBackgroundCanvas } from './canvas';
 import Hero from './Hero';
 import Navbar from './Navbar';
 import About from './About';
@@ -17,6 +17,6 @@ export {
   Contact,
   ModelCanvas, 
   BallCanvas, 
-  ComputersCanvas, 
+  HeroModelCanvas, 
   RandomBackgroundCanvas
 }

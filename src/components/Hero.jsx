@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 import { styles } from '../styles';
-import { ComputersCanvas } from './canvas';
+import { HeroModelCanvas } from './canvas';
 
 // Our style properties will be from Tailwind CSS - everything can be found at https://tailwindcss.com/docs/
 
@@ -22,7 +22,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <ComputersCanvas/>
+      <HeroModelCanvas/>
       <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>
         {/* We will link our framer motion animation to the about page so we can go to that on the scroll button */}
         <a href="#about">

@@ -4,8 +4,8 @@ import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
 import CanvasLoader from '../Loader';
 
 // This will use three js
-const Computers = ({ isMobile }) => {
-  const computer = useGLTF('./space/scene.gltf')
+const HeroModel = ({ isMobile }) => {
+  const heromodel = useGLTF('./hero-model/scene.gltf')
 
   return (
     <mesh>
@@ -19,7 +19,7 @@ const Computers = ({ isMobile }) => {
         castShadow
         shadow-mapSize={1024}
         />
-      <primitive object={computer.scene}
+      <primitive object={heromodel.scene}
       scale={isMobile ? 2.5: 3.5}
       position={isMobile ? [-4.5, -4.25, -1.5] :  [-5.75, -6.25, -1.5]}
       rotation={[1, -0.2, -0.1]} />
@@ -27,7 +27,7 @@ const Computers = ({ isMobile }) => {
   )
 }
 
-const ComputersCanvas = () => {
+const HeroModelCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   // Changing the is mobile variable
@@ -67,11 +67,11 @@ const ComputersCanvas = () => {
         maxPolarAngle={Math.PI / 2}
         minPolarAngle={Math.PI / 2}
         />
-        <Computers isMobile={isMobile} />
+        <HeroModel isMobile={isMobile} />
       </Suspense>
       <Preload all />
     </Canvas>
   )
 }
 
-export default ComputersCanvas;
+export default HeroModelCanvas;

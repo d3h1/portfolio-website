@@ -1,6 +1,6 @@
 import ModelCanvas from "./Model";
 import BallCanvas from "./Ball";
-import ComputersCanvas from "./Computers";
+import HeroModelCanvas from "./HeroModel";
 import RandomBackgroundCanvas from "./RandomBackground";
 
-export { ModelCanvas, BallCanvas, ComputersCanvas, RandomBackgroundCanvas };
+export { ModelCanvas, BallCanvas, HeroModelCanvas, RandomBackgroundCanvas };
