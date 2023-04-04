@@ -5,15 +5,15 @@ import { OrbitControls, useGLTF } from "@react-three/drei";
 
 const Model = () => {
   // How we import 3-D models
-  const model = useGLTF('./retro-comp/scene.gltf')
+  const model = useGLTF('./pixel-phone/scene.gltf')
 
   return (
     <mesh>
       <hemisphereLight intensity={0.30} groundColor="black"/>
       <pointLight intensity={1} />
       <spotLight
-        position={[-20, 50, 10]}
-        angle={0.30}
+        position={[-10, 40, 10]}
+        angle={0.1}
         penumbra={1}
         intensity={1}
         castShadow
@@ -21,8 +21,9 @@ const Model = () => {
         />
       <primitive 
         object={model.scene}
-        scale={2.5}
-        position-y={0} 
+        scale={0.2}
+        position-x={-1.5}
+        position-y={-1} 
         rotation-y={0} 
       />
     </mesh>
@@ -38,7 +39,7 @@ const ModelCanvas = () => {
       frameloop="demand"
       gl={{ preserveDrawingBuffer:true }}
       camera={{ 
-        fov: 50,
+        fov: 70,
         near: 0.1,
         far: 200,
         position: [-4, 3, 6]
@@ -48,7 +49,7 @@ const ModelCanvas = () => {
       <Suspense fallback={<CanvasLoader />}>
         {/* move around the model */}
         <OrbitControls 
-          autoRotate
+          // autoRotate
           enableZoom={false}
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}

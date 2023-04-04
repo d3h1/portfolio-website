@@ -10,9 +10,9 @@ const Ball = (props) => {
   return (
     // Special float prop coming from ReactThreeDrei
     <Float 
-          speed={1.75} 
-          rotationIntensity={1} 
-          floatIntensity={2}
+          // speed={1.75} 
+          // rotationIntensity={1} 
+          // floatIntensity={2}
     >
       <ambientLight intensity={0.25}/>
       <directionalLight position={[0, 0, 0.05]}/>
