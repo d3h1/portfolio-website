@@ -6,6 +6,7 @@ import { ModelCanvas } from './canvas';
 import { SectionWrapper } from '../hoc';
 import { slideIn } from '../utils/motion';
 
+
 const Contact = () => {
   // Set our  forms and the loading that is needed to get all the information for the user
   const formRef = useRef();
@@ -18,12 +19,46 @@ const Contact = () => {
 
   // This will be triggered on entered input values
   const handleChange = (e) => {
-    
+    const { name, value } = e.target;
+
+    setForm({...form, [name]: value})
   }
 
   // This will handle user submit 
   const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoading(true);
 
+    // This will send user message
+    emailjs.send
+    (
+      'service_pahk2ph', 
+      'template_f84glg7',
+      {
+        from_name: form.name,
+        to_name: 'Deni',
+        from_email: form.email,
+        to_email : 'dc.work@denicabaravdic.com',
+        message: form.message
+      },
+      '-1lzRyPrhcS7unHOy'
+    )
+    .then(() => {
+      setLoading(false);
+      alert('Thank you. I will get back to you as soon as possible!');
+      
+      setForm({
+        name: '',
+        email: '',
+        message: '',
+      })
+    }, (error) => {
+      setLoading(false);
+
+      console.log(error);
+
+      alert('Something went wrong.');
+    })
   }
 
   return (
