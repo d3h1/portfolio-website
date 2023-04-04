@@ -44,7 +44,7 @@ const About = () => {
         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
       >
         I am a software engineer that has production level experience 
-        with  C++, C#, Python, React, and Javascript along with knowledge in topics such as NodeJS, MySQL, REST, TCP/IP Clients and more. I collaborate closely with other programmers and am able to learn quickly when faced with challenges. When working on projects | work, I am able to create efficient, scalable, and clean <code>code</code> that creates results. 
+        with  C++, C#, Python, React, and Javascript along with knowledge in topics such as NodeJS, MySQL, REST, TCP/IP Clients and more. I collaborate closely with other programmers and am able to learn quickly when faced with challenges. When working on projects | work, I am able to create efficient, scalable, and clean <code>code</code> that produces results. 
       </motion.p>
       <div className='mt-20 flex flex-wrap gap-10'>
         {services.map((service, index) => (

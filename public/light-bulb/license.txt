@@ -1,0 +1,11 @@
+Model Information:
+* title:	Incandescent Light Bulb
+* source:	https://sketchfab.com/3d-models/incandescent-light-bulb-36898e66c1d941efa24d7d6aea915a0b
+* author:	lascoyt (https://sketchfab.com/lascoyt)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Incandescent Light Bulb" (https://sketchfab.com/3d-models/incandescent-light-bulb-36898e66c1d941efa24d7d6aea915a0b) by lascoyt (https://sketchfab.com/lascoyt) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

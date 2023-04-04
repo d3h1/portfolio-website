@@ -9,11 +9,11 @@ const Model = () => {
 
   return (
     <mesh>
-      <hemisphereLight intensity={0.15} groundColor="black"/>
+      <hemisphereLight intensity={0.30} groundColor="black"/>
       <pointLight intensity={1} />
       <spotLight
         position={[-20, 50, 10]}
-        angle={0.12}
+        angle={0.30}
         penumbra={1}
         intensity={1}
         castShadow

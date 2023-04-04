@@ -1,5 +1,5 @@
 import {
-    mobile, backend, creator, web, javascript, typescript, html, css, reactjs,redux, tailwind, nodejs, mongodb, git, figma, docker, meta, starbucks, tesla, shopify, carrent, jobit, tripguide, threejs,
+    mobile, backend, creator, web, javascript, typescript, html, css, reactjs,redux, tailwind, nodejs, mongodb, git, figma, docker, meta, disney, tesla, shopify, carrent, jobit, tripguide, threejs,
   } from "../assets";
   
   export const navLinks = [
@@ -19,19 +19,19 @@ import {
   
   const services = [
     {
-      title: "Web Developer",
+      title: "Fullstack Developer",
       icon: web,
     },
     {
-      title: "React Native Developer",
+      title: "Automation Engineer",
       icon: mobile,
     },
     {
-      title: "Backend Developer",
+      title: "Software Developer",
       icon: backend,
     },
     {
-      title: "Content Creator",
+      title: "Systems Engineer",
       icon: creator,
     },
   ];
@@ -93,11 +93,11 @@ import {
   
   const experiences = [
     {
-      title: "React.js Developer",
-      company_name: "Starbucks",
-      icon: starbucks,
+      title: "Software | Systems Developer",
+      company_name: "Walt Disney Studios",
+      icon: disney,
       iconBg: "#383E56",
-      date: "March 2020 - April 2021",
+      date: "May 2022 - Current",
       points: [
         "Developing and maintaining web applications using React.js and other related technologies.",
         "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
