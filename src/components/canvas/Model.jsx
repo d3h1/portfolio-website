@@ -8,7 +8,12 @@ const Model = () => {
   const model = useGLTF('./model-3d/scene.gltf')
 
   return (
-    <div>Model</div>
+    <primitive 
+      object={model.scene}
+      scale={2.5}
+      position-y={0} 
+      rotation-y={0} 
+    />
   )
 }
 
@@ -19,7 +24,12 @@ const ModelCanvas = () => {
       shadows
       frameloop="demand"
       gl={{ preserveDrawingBuffer:true }}
-      camera={{  }}
+      camera={{ 
+        fov: 50,
+        near: 0.1,
+        far: 200,
+        position: [-4, 3, 6]
+       }}
     >
       {/* Something to fall back on when loading the model */}
       <Suspense fallback={<CanvasLoader />}>
