@@ -19,20 +19,20 @@ import {
   
   const services = [
     {
-      title: "Fullstack Developer",
+      title: "Fullstack Developer (2 Years)",
       icon: web,
     },
     {
-      title: "Automation Engineer",
+      title: "Software Engineer (3 Years)",
       icon: mobile,
     },
     {
-      title: "Software Developer",
-      icon: backend,
+      title: "Systems Engineer (1 Year)",
+      icon: creator,
     },
     {
-      title: "Systems Engineer",
-      icon: creator,
+      title: "AI Developer (1 Year)",
+      icon: backend,
     },
   ];
   
@@ -120,8 +120,8 @@ import {
       iconBg: "#E6DEDD",
       date: "May 2022 - Present",
       points: [
-        "Developing software within embedded systems to create automated ecosystems across Walt Disney Studios.",
-        "Leveraging expertise in C#, Python, Javscript, and more to create reliable and scalable solutions that streamline operations and improve productivity.",
+        "Developing full-stack applications within embedded systems to create automated ecosystems across Walt Disney Studios.",
+        "Leveraging expertise in C#, Python, JavaScript, and more to create reliable and scalable solutions that streamline operations and improve productivity.",
         "Collaborating with interdisciplinary teams to drive high-priority projects from conception to delivery while ensuring seamless integration with existing systems and workflows.",
         "Producing robust and efficient front-end and back-end code to deliver exceptional user experiences. Monitoring and improving code quality, security, and performance.",
         "Thriving in fast-paced environments, completing complex projects within demanding time frames using agile methodologies and effective communication to ensure success.",
