@@ -101,16 +101,16 @@ import {
   
   const experiences = [
     {
-      title: "Software Engineer Freelance",
-      company_name: "Diamond Cap Technologies, LLC",
-      icon: freelance,
+      title: "WebGL Developer | Consultant",
+      company_name: "Automated Design Solutions",
+      icon: startup,
       iconBg: "#E6DEDD",
-      date: "February 2021 - August 2022 ",
+      date: "March 2023 - Present",
       points: [
-        "Streamlining productivity through python automation for engineers and small businesses.",
-        "Creating ReactJS websites for individuals while ensuring responsiveness across multiple platforms.",
-        "Designing Python and C++tools for clients that help automate website functions gaining customer traction by over 50%.",
-        "Implementing integrated software using Javascript that helped clients increase revenue by over 10%.",
+        "Developing and maintaining web applications using React.js, WebGL, and related technologies to create scalable and intuitive solutions.",
+        "Collaborating with clients to design engaging websites that reflect their brand and drive business growth.",
+        "Implementing responsive design and cross-browser compatibility for seamless user experiences.",
+        "Engineering innovative solutions for multiple business-related websites that differentiate clients from their competitors.",
       ],
     },
     {
@@ -128,16 +128,16 @@ import {
       ],
     },
     {
-      title: "WebGL Developer | Consultant",
-      company_name: "Automated Design Solutions",
-      icon: startup,
+      title: "Software Engineer Freelance",
+      company_name: "Diamond Cap Technologies, LLC",
+      icon: freelance,
       iconBg: "#E6DEDD",
-      date: "March 2023 - Present",
+      date: "February 2021 - August 2022 ",
       points: [
-        "Developing and maintaining web applications using React.js, WebGL, and related technologies to create scalable and intuitive solutions.",
-        "Collaborating with clients to design engaging websites that reflect their brand and drive business growth.",
-        "Implementing responsive design and cross-browser compatibility for seamless user experiences.",
-        "Engineering innovative solutions for multiple business-related websites that differentiate clients from their competitors.",
+        "Streamlining productivity through python automation for engineers and small businesses.",
+        "Creating ReactJS websites for individuals while ensuring responsiveness across multiple platforms.",
+        "Designing Python and C++tools for clients that help automate website functions gaining customer traction by over 50%.",
+        "Implementing integrated software using Javascript that helped clients increase revenue by over 10%.",
       ],
     },
   ];
