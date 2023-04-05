@@ -20,16 +20,28 @@ import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
+import python from "./tech/python.png";
+import cpp from "./tech/cpp.png";
+import csharp from "./tech/csharp.png";
+import sass from "./tech/sass.png";
+import mysql from "./tech/mysql.png";
+import npm from "./tech/npm.png";
+import aws from "./tech/aws.png";
+import jenkins from "./tech/jenkins.png";
 
-import meta from "./company/meta.png";
-import shopify from "./company/shopify.png";
 import disney from "./company/disney.png";
-import tesla from "./company/tesla.png";
+import freelance from "./company/freelance.png";
+import startup from "./company/startup.png";
 
 
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
+import yelpclone from "./yelpclone.png";
+import portfolio from "./portfolio.png";
+import sudoku from "./sudoku.png";
+import stocks from "./stocks.png";
+import ai from "./ai.png";
+import money from "./money.png";
+import tmanage from "./tmanage.png";
+import githubprof from "./githubprof.png";
 
 export {
   logo,
@@ -53,11 +65,23 @@ export {
   tailwind,
   typescript,
   threejs,
-  meta,
-  shopify,
+  python,
+  cpp,
+  csharp,
+  jenkins,
+  aws,
+  npm,
+  sass,
+  mysql,
   disney,
-  tesla,
-  carrent,
-  jobit,
-  tripguide,
+  freelance,
+  startup,
+  yelpclone,
+  portfolio,
+  sudoku,
+  stocks,
+  ai,
+  tmanage,
+  money,
+  githubprof,
 };
