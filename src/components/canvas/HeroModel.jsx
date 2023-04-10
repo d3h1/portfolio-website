@@ -12,7 +12,7 @@ const HeroModel = ({ isMobile }) => {
       <hemisphereLight intensity={0.15} groundColor="black"/>
       <pointLight intensity={1} />
       <spotLight
-        position={[-20, 50, 10]}
+        position={[15, 20, 10]}
         angle={0.12}
         penumbra={1}
         intensity={1}
@@ -20,9 +20,9 @@ const HeroModel = ({ isMobile }) => {
         shadow-mapSize={1024}
         />
       <primitive object={heromodel.scene}
-      scale={isMobile ? 2.5: 3.5}
+      scale={isMobile ? 2.5: 0.5}
       position={isMobile ? [-4.5, -4.25, -1.5] :  [-5.75, -6.25, -1.5]}
-      rotation={[1, -0.2, -0.1]} />
+      rotation={[1.25, -0.2, -0.1]} />
     </mesh>
   )
 }
@@ -63,7 +63,7 @@ const HeroModelCanvas = () => {
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls 
         // Does not allow zoom, and allows rotating at a certain point
-        autoRotate
+        // autoRotate
         enableZoom={false} 
         maxPolarAngle={Math.PI / 2}
         minPolarAngle={Math.PI / 2}
