@@ -7,7 +7,7 @@ const RandomBackground = (props) => {
   const ref = useRef();
 
   // This will be our spheres that populate the background
-  const sphere = random.inSphere(new Float32Array(5000), { radius:1.2 })
+  const [sphere] = useState(() => random.inSphere(new Float32Array(5000), { radius: 1.2 }))
 
   // useFrame will be used a hook that will allow it all to rotate
   useFrame((state, delta) => {

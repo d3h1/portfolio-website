@@ -4,7 +4,6 @@ import { About, Contact, Experience, Hero, Navbar, Tech, Works, RandomBackground
 
 const App = () => {
   return (
-    <div>
       <BrowserRouter>
         <div className='relative z-0 bg-primary'>
           <div className='bg-hero-pattern bg-cover bg-null-repeat bg-center'>
@@ -21,7 +20,6 @@ const App = () => {
           </div>
         </div>
       </BrowserRouter>
-    </div>
   )
 }
 
