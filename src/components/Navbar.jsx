@@ -1,80 +1,84 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
-import { styles } from '../styles';
-import { navLinks } from '../constants';
-import { logo, menu, close} from '../assets';
-
+import { styles } from "../styles";
+import { navLinks } from "../constants";
+import { logo, menu, close } from "../assets";
 
 const Navbar = () => {
-  const [active, setActive] = useState('');
+  const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
-  
 
   return (
     // Navbar will have logo on left and links on the right
     // Our style properties will be from Tailwind CSS - everything can be found at https://tailwindcss.com/docs/
-    <nav className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-primary`}>
-      <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
-        <Link to='/' className='flex items-center gap-2' 
-        onClick={() => {
-           setActive("");
-           window.scrollTo(0, 0);
-        }}
-      >
-          <img src={logo} alt="logo" className='w-9 h-9 object-contain' />
-          <p className='text-white text-[18px] font-bold cursor-pointer flex'>
-            DC &nbsp;<span 
-            className='sm:block hidden'> | Technologies
-            </span></p>
+    <nav
+      className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-primary`}
+    >
+      <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
+        <Link
+          to="/"
+          className="flex items-center gap-2"
+          onClick={() => {
+            setActive("");
+            window.scrollTo(0, 0);
+          }}
+        >
+          <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
+          <p className="text-white text-[18px] font-bold cursor-pointer flex">
+            DC &nbsp;<span className="sm:block hidden"> | Technologies</span>
+          </p>
         </Link>
-        <ul className='list-none hidden sm:flex flex-row gap-10'>
+        <ul className="list-none hidden sm:flex flex-row gap-10">
           {navLinks.map((link) => (
-            // Regular links when the page is bigger 
+            // Regular links when the page is bigger
             <li
               key={link.id}
               className={`${
-                active === link.title ? "text-white" : "text-secondary"
+                active === link.title ? "text-white" : "text-violet-600"
               } hover:text-white text-[18px] font-medium cursor-pointer`}
               onClick={() => setActive(link.title)}
             >
-
               <a href={`#${link.id}`}>{link.title}</a>
             </li>
           ))}
         </ul>
-        <div className='sm:hidden flex flex-1 justify-end items-center'>
-              <img src={toggle ? close : menu} 
-              alt='menu' 
-              className='w-[28px] h-[28px] object-contain cursor-pointer'
-              onClick={() => setToggle(!toggle)}/>
+        <div className="sm:hidden flex flex-1 justify-end items-center">
+          <img
+            src={toggle ? close : menu}
+            alt="menu"
+            className="w-[28px] h-[28px] object-contain cursor-pointer"
+            onClick={() => setToggle(!toggle)}
+          />
 
-              <div className={`${
-                !toggle ? "hidden" : "flex"} p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}>
-                  <ul className='list-none flex justify-end items-start flex-col gap-4'>
-                  {navLinks.map((link) => (
-                    // We are making links for the menu when page is smaller
-                    <li
-                      key={link.id}
-                      className={`${
-                        active === link.title ? "text-white" : "text-secondary"
-                      }font-poppins font-medium- cursor-pointer text-[16px]`}
-                      onClick={() => {
-                        setToggle(!toggle) // Menu will close on toggle and link click
-                        setActive(link.title)
-                      }}
-                    >
-                      {/* Our active links will use a key the link title */}
-                      <a href={`#${link.id}`}>{link.title}</a> 
-                    </li>
-                  ))}
-                </ul>
-              </div>
+          <div
+            className={`${
+              !toggle ? "hidden" : "flex"
+            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
+          >
+            <ul className="list-none flex justify-end items-start flex-col gap-4">
+              {navLinks.map((link) => (
+                // We are making links for the menu when page is smaller
+                <li
+                  key={link.id}
+                  className={`${
+                    active === link.title ? "text-white" : "text-secondary"
+                  }font-poppins font-medium- cursor-pointer text-[16px]`}
+                  onClick={() => {
+                    setToggle(!toggle); // Menu will close on toggle and link click
+                    setActive(link.title);
+                  }}
+                >
+                  {/* Our active links will use a key the link title */}
+                  <a href={`#${link.id}`}>{link.title}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
-
       </div>
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

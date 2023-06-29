@@ -1,72 +1,74 @@
-import { useState, useRef } from 'react';
-import { motion } from 'framer-motion';
-import emailjs from '@emailjs/browser';
-import { styles } from '../styles';
-import { ModelCanvas } from './canvas';
-import { SectionWrapper } from '../hoc';
-import { slideIn } from '../utils/motion';
-
+import { useState, useRef } from "react";
+import { motion } from "framer-motion";
+import emailjs from "@emailjs/browser";
+import { styles } from "../styles";
+import { ModelCanvas } from "./canvas";
+import { SectionWrapper } from "../hoc";
+import { slideIn } from "../utils/motion";
 
 const Contact = () => {
   // Set our  forms and the loading that is needed to get all the information for the user
   const formRef = useRef();
   const [form, setForm] = useState({
-    name: '',
-    email: '',
-    message: '',
-  })
+    name: "",
+    email: "",
+    message: "",
+  });
   const [loading, setLoading] = useState(false);
 
   // This will be triggered on entered input values
   const handleChange = (e) => {
     const { name, value } = e.target;
 
-    setForm({...form, [name]: value})
-  }
+    setForm({ ...form, [name]: value });
+  };
 
-  // This will handle user submit 
+  // This will handle user submit
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
 
     // This will send user message
-    emailjs.send
-    (
-      'service_pahk2ph', 
-      'template_f84glg7',
-      {
-        from_name: form.name,
-        to_name: 'Deni',
-        from_email: form.email,
-        to_email : 'dc.work@denicabaravdic.com',
-        message: form.message
-      },
-      '-1lzRyPrhcS7unHOy'
-    )
-    .then(() => {
-      setLoading(false);
-      alert('Thank you. I will get back to you as soon as possible!');
-      
-      setForm({
-        name: '',
-        email: '',
-        message: '',
-      })
-    }, (error) => {
-      setLoading(false);
+    emailjs
+      .send(
+        "service_pahk2ph",
+        "template_f84glg7",
+        {
+          from_name: form.name,
+          to_name: "Deni",
+          from_email: form.email,
+          to_email: "dc.work@denicabaravdic.com",
+          message: form.message,
+        },
+        "-1lzRyPrhcS7unHOy"
+      )
+      .then(
+        () => {
+          setLoading(false);
+          alert("Thank you. I will get back to you as soon as possible!");
 
-      console.log(error);
+          setForm({
+            name: "",
+            email: "",
+            message: "",
+          });
+        },
+        (error) => {
+          setLoading(false);
 
-      alert('Something went wrong.');
-    })
-  }
+          console.log(error);
+
+          alert("Something went wrong.");
+        }
+      );
+  };
 
   return (
-    <div className='xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden'>
-      <motion.div 
+    <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
+      <motion.div
         // slide from left, typeofanimation:tween, delay:0.2s, duration 1
-        variants={slideIn('left', 'tween', 0.2 , 1)}
-        className='flex-[0.75px] bg-black-100 p-8 rounded-2xl'
+        variants={slideIn("left", "tween", 0.2, 1)}
+        className="flex-[0.75px] bg-black-100 p-8 rounded-2xl"
       >
         <p className={styles.sectionSubText}>Get In Touch</p>
         <h3 className={styles.sectionHeadText}>Contact.</h3>
@@ -74,66 +76,65 @@ const Contact = () => {
         <form
           ref={formRef}
           onSubmit={handleSubmit}
-          className='mt-12 flex flex-col gap-8'
+          className="mt-12 flex flex-col gap-8"
         >
           {/* NAME */}
-          <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your Name</span>
+          <label className="flex flex-col">
+            <span className="text-white font-medium mb-4">Your Name</span>
             <input
-              type='text'
-              name='name'
+              type="text"
+              name="name"
               value={form.name}
               onChange={handleChange}
-              placeholder='Write your name'
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium'
+              placeholder="Write your name"
+              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
             />
           </label>
           {/* EMAIL */}
-          <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your Email</span>
+          <label className="flex flex-col">
+            <span className="text-white font-medium mb-4">Your Email</span>
             <input
-              type='email'
-              name='email'
+              type="email"
+              name="email"
               value={form.email}
               onChange={handleChange}
-              placeholder='Write your email'
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium'
+              placeholder="Write your email"
+              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
             />
           </label>
           {/* MESSAGE */}
-          <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your Message</span>
+          <label className="flex flex-col">
+            <span className="text-white font-medium mb-4">Your Message</span>
             <textarea
               rows="7"
-              name='message'
+              name="message"
               value={form.message}
               onChange={handleChange}
-              placeholder='Write your message'
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium'
+              placeholder="Write your message"
+              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
             />
           </label>
           {/* SUBMIT */}
           <button
-            type='submit'
-            className='bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl'
-
+            type="submit"
+            className="bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl"
           >
             {/* Gives us a loader if not sent yet */}
-            {loading ? 'Sending...' : 'Send'}
+            {loading ? "Sending..." : "Send"}
           </button>
         </form>
       </motion.div>
 
       {/* Showing our 3D model canvas */}
-      <motion.div 
+      <motion.div
         // slide from right, typeofanimation:tween, delay:0.2s, duration 1
-        variants={slideIn('right', 'tween', 0.2 , 1)}
-        className='xl:flex-1 xl:h-auto md:h-[550px] h-[350px]'
+        variants={slideIn("right", "tween", 0.2, 1)}
+        className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
       >
         <ModelCanvas />
       </motion.div>
     </div>
-  )
-}
+  );
+};
 
-export default SectionWrapper(Contact, "contact")
+export default SectionWrapper(Contact, "contact");

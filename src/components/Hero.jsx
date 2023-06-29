@@ -1,49 +1,116 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import { AiOutlineMail } from "react-icons/ai";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
-import { styles } from '../styles';
-import { HeroModelCanvas } from './canvas';
 
 // Our style properties will be from Tailwind CSS - everything can be found at https://tailwindcss.com/docs/
 
 const Hero = () => {
+  const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [isMobile, setIsMobile] = useState(false);
+  const [angle, setAngle] = useState(0);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setIsMobile(window.matchMedia("(max-width: 768px)").matches);
+    }
+
+    const animate = () => {
+      setAngle(
+        (prevAngle) =>
+          (prevAngle + 0.01 + (Math.random() - 0.5) * 0.02) % (2 * Math.PI)
+      );
+      requestAnimationFrame(animate);
+    };
+
+    animate();
+  }, []);
+
+  // Constants that are not changing
+  const handleMouseMove = (event) => {
+    setPosition({ x: event.clientX, y: event.clientY });
+  };
+
+  const spaceshipPosition = {
+    x: position.x + 50 * Math.cos(angle) - 25,
+    y: position.y + 50 * Math.sin(angle) - 25,
+  };
+
   return (
-    <section className='relative w-full h-screen mx-auto'>
-      {/* Background Image plus our flex box and regular styling */}
-      <div className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5`}>
-        <div className='flex flex-col justify-center items-center mt-5'>
-          <div className='w-5 h-5 rounded-full bg-[#df3535]'/>
-          <div className='w-1 sm:h-80 h-40 violet-gradient'/>
-        </div>
-        <div>
-          {/* Our text for main page */}
-          <h1 className={`${styles.heroHeadText} text-white`}>Hi! I'm <span className='text-[#df3535]'>Deni</span></h1>
-          <p className={`${styles.heroSubText} text-white-100`}> I build fullstack applications, machine <br/>learning models, and video games </p>
+    <div
+      className="w-full h-screen text-center"
+      onMouseMove={handleMouseMove}
+    >
+      {/* {!isMobile && (
+        <img
+          src="../assets/ufo.png"
+          alt="Spaceship"
+          style={{
+            position: "absolute",
+            top: `${spaceshipPosition.y}px`,
+            left: `${spaceshipPosition.x}px`,
+            width: "50px",
+            height: "50px",
+            pointerEvents: "none",
+          }}
+        />
+      )} */}
+
+      <div className="page-container">
+        <div className="flex flex-col items-center">
+          <h1 className="py-4 text-gray-light cursor-default">
+            Hello There <br /> I'm{" "}
+            <span className="text-violet-600">Deni </span>!
+          </h1>
+
+          <h3 className="p-2 xsm:text-base sm:text-xl text-gray-light border border-black border-y-violet-600/40 w-[70%] m-auto cursor-default">
+            I leverage cutting-edge technologies to develop full-stack
+            applications, combining experience and knowledge for stable
+            development. My approach fosters relentless innovation, pushing
+            boundaries for clients.
+          </h3>
+          <p className="mt-10 uppercase text-sm tracking-widest text-gray-light">
+            CONNECT TO
+          </p>
+          <h4 className="mt-2 uppercase text-lg tracking-widest text-gray-light">
+            DESIGN | DEVELOP | DEPLOY
+          </h4>
+          <div className="flex flex-row my-6">
+            <div className="rounded-button bg-gray-dark mx-6">
+              <FaLinkedin size={26} />
+            </div>
+            <div className="rounded-button bg-gray-dark mx-6">
+              <FaGithub size={26} />
+            </div>
+            <div className="rounded-button bg-gray-dark mx-6">
+              <AiOutlineMail size={26} />
+            </div>
+          </div>
         </div>
       </div>
-
-      <HeroModelCanvas/>
-      <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>
+      <div className="xsm:hidden sm:flex absolute xs:bottom-10 bottom-8 w-full justify-center items-center">
         {/* We will link our framer motion animation to the about page so we can go to that on the scroll button */}
         <a href="#about">
-          <div className='w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2'>
+          <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
             {/* This is how we use framer motion to create a scrolling gif for users to go to the next page */}
-            <motion.div 
+            <motion.div
               animate={{
-                y: [0, 24, 0]
+                y: [0, 24, 0],
               }}
               transition={{
                 duration: 1.5,
                 repeat: Infinity,
-                repeatType: 'loop'
-              }}    
+                repeatType: "loop",
+              }}
               className="w-3 h-3 rounded-full bg-secondary mb-1"
-            />  
+            />
           </div>
         </a>
       </div>
-    </section>
-  )
-}
+      
+    </div>
+  );
+};
 
 export default Hero;
