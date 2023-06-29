@@ -28,7 +28,7 @@ const App = () => {
           <RandomBackgroundCanvas />
         </div>
       </BrowserRouter>
-    </div>
+    
   );
 };
 
