@@ -2,7 +2,6 @@ import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import { styles } from "../styles";
-import { ModelCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 
@@ -125,14 +124,7 @@ const Contact = () => {
         </form>
       </motion.div>
 
-      {/* Showing our 3D model canvas */}
-      <motion.div
-        // slide from right, typeofanimation:tween, delay:0.2s, duration 1
-        variants={slideIn("right", "tween", 0.2, 1)}
-        className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
-      >
-        <ModelCanvas />
-      </motion.div>
+      
     </div>
   );
 };

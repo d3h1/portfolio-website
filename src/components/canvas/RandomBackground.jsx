@@ -40,7 +40,7 @@ const RandomBackground = (props) => {
 // We have to create a canvas like usual when doing threeJS things
 const RandomBackgroundCanvas = () => {
   return (
-    <div className="w-full h-auto absolute inset-0 z-[-1]">
+    <div className="w-full h-auto absolute inset-0 z-[-1] bg-black">
       <Canvas camera={{ position: [0, 0, 1]}}>
         <Suspense fallback={null}>
           <RandomBackground />

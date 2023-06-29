@@ -64,7 +64,7 @@ const Hero = () => {
             <span className="text-violet-600">Deni </span>!
           </h1>
 
-          <h3 className="p-2 xsm:text-base sm:text-xl text-gray-light border border-black border-y-violet-600/40 w-[70%] m-auto cursor-default">
+          <h3 className="p-2 xsm:text-base sm:text-xl text-gray-light border border-transparent border-y-violet-600/40 w-[70%] m-auto cursor-default">
             I leverage cutting-edge technologies to develop full-stack
             applications, combining experience and knowledge for stable
             development. My approach fosters relentless innovation, pushing
@@ -89,21 +89,21 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <div className="xsm:hidden sm:flex absolute xs:bottom-10 bottom-8 w-full justify-center items-center">
+      <div className="xsm:hidden sm:flex absolute xsm:bottom-8 bottom-6 w-full justify-center items-center">
         {/* We will link our framer motion animation to the about page so we can go to that on the scroll button */}
         <a href="#about">
-          <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
+          <div className="w-[35px] h-[64px] rounded-3xl border-4 border-violet-600/50 flex justify-center items-start p-2">
             {/* This is how we use framer motion to create a scrolling gif for users to go to the next page */}
             <motion.div
               animate={{
                 y: [0, 24, 0],
               }}
               transition={{
-                duration: 1.5,
+                duration: 2.5,
                 repeat: Infinity,
                 repeatType: "loop",
               }}
-              className="w-3 h-3 rounded-full bg-secondary mb-1"
+              className="w-3 h-3 rounded-full bg-violet-600/50 mb-1"
             />
           </div>
         </a>
