@@ -13,7 +13,6 @@ import {
 
 const App = () => {
   return (
-    <div>
       <BrowserRouter>
         <Navbar />
         <div className="relative z=0">

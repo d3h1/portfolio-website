@@ -20,9 +20,9 @@ const HeroModel = ({ isMobile }) => {
         shadow-mapSize={1024}
         />
       <primitive object={heromodel.scene}
-      scale={isMobile ? 2.5: 0.5}
-      position={isMobile ? [-4.5, -4.25, -1.5] :  [-5.75, -6.25, -1.5]}
-      rotation={[1.25, -0.2, -0.1]} />
+      scale={isMobile ? 0.7 : 0.75}
+      position={isMobile ? [0, -3, -2.2] : [0, -3.25, -1.5]}
+      rotation={[-0.01, -0.2, -0.1]} />
     </mesh>
   )
 }
