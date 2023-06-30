@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import { AiOutlineMail } from "react-icons/ai";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
-
 // Our style properties will be from Tailwind CSS - everything can be found at https://tailwindcss.com/docs/
 
 const Hero = () => {
@@ -38,10 +37,7 @@ const Hero = () => {
   };
 
   return (
-    <div
-      className="w-full h-screen text-center"
-      onMouseMove={handleMouseMove}
-    >
+    <div className="w-full h-screen text-center" onMouseMove={handleMouseMove}>
       {/* {!isMobile && (
         <img
           src="../assets/ufo.png"
@@ -92,7 +88,7 @@ const Hero = () => {
       <div className="xsm:hidden sm:flex absolute xsm:bottom-8 bottom-6 w-full justify-center items-center">
         {/* We will link our framer motion animation to the about page so we can go to that on the scroll button */}
         <a href="#about">
-          <div className="w-[35px] h-[64px] rounded-3xl border-4 border-violet-600/50 flex justify-center items-start p-2">
+          <div className="w-[35px] h-[64px] rounded-3xl border-4 border-violet-600/50 flex justify-center md:hover:translate-y-1 active:scale-95 items-start p-2">
             {/* This is how we use framer motion to create a scrolling gif for users to go to the next page */}
             <motion.div
               animate={{
@@ -108,7 +104,6 @@ const Hero = () => {
           </div>
         </a>
       </div>
-      
     </div>
   );
 };
