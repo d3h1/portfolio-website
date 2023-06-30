@@ -10,7 +10,9 @@ const SectionWrapper = (Component, idName) =>
         whileInView="show"
         viewport={{ once: true, amount: 0.25 }}
       >
-        
+        {/* This allows us to move to each page */}
+        <span className="hash-span" id={idName}></span>
+
         <Component />
       </motion.section>
     );
