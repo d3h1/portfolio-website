@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { navLinks } from "../constants";
 import { logo, menu, close } from "../assets";
 import { AiOutlineClose, AiOutlineMenu, AiOutlineMail } from "react-icons/ai";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -104,6 +105,17 @@ const Navbar = () => {
             <p className="py-4 tracking-wide uppercase font-light xsm:text-sm sm:text-sm md:text-base">
               DESIGN | DEVELOP | DEPLOY
             </p>
+            <div className="flex flex-row my-6">
+            <div className="rounded-button bg-gray-dark mx-6">
+              <FaLinkedin size={26} />
+            </div>
+            <div className="rounded-button bg-gray-dark mx-6">
+              <FaGithub size={26} />
+            </div>
+            <div className="rounded-button bg-gray-dark mx-6">
+              <AiOutlineMail size={26} />
+            </div>
+          </div>
           </div>
 
           <ul className="flex flex-col">

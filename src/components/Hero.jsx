@@ -57,7 +57,7 @@ const Hero = () => {
         <div className="flex flex-col items-center">
           <h1 className="py-4 text-gray-light cursor-default">
             Hello There <br /> I'm{" "}
-            <span className="text-violet-600">Deni </span>!
+            <span className="text-violet-600">Deni</span>!
           </h1>
 
           <h3 className="p-2 xsm:text-base sm:text-xl text-gray-light border border-transparent border-y-violet-600/40 w-[70%] m-auto cursor-default">
@@ -66,7 +66,7 @@ const Hero = () => {
             development. My approach fosters relentless innovation, pushing
             boundaries for clients.
           </h3>
-          <p className="mt-10 uppercase text-sm tracking-widest text-gray-light">
+          <p className="mt-20 uppercase text-sm tracking-widest text-gray-light">
             CONNECT TO
           </p>
           <h4 className="mt-2 uppercase text-lg tracking-widest text-gray-light">

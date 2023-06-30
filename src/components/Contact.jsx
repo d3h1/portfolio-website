@@ -63,7 +63,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
+    <div className=" h-screen xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
       <motion.div
         // slide from left, typeofanimation:tween, delay:0.2s, duration 1
         variants={slideIn("left", "tween", 0.2, 1)}

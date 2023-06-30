@@ -10,7 +10,7 @@ const ServiceCard = ({ title, index, icon }) => {
       {/* Style our cards, make the cards, and then output the cards */}
       <motion.div
         variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
-        className="bg-gradient-to-t from-violet-600/40 to-transparent p-[1px] rounded-[20px] shadow-md shadow-black"
+        className="bg-gradient-to-b from-violet-800/40 to-transparent p-[1px] rounded-[20px] shadow-md shadow-black"
       >
         <div
           options={{
@@ -18,7 +18,7 @@ const ServiceCard = ({ title, index, icon }) => {
             scale: 1,
             speed: 450,
           }}
-          className="bg-tertiary rounded-[20px] px-1 h-[150px] max-w-[300px] flex justify-evenly items-center flex-col"
+          className="rounded-[20px] px-1 h-[150px] max-w-[300px] flex justify-evenly items-center flex-col"
         >
           <img src={icon} alt={title} className="w-12 h-12 object-contain" />
           <h3 className="text-white w-[100px] uppercase tracking-widest text-sm font-bold text-center">
@@ -32,7 +32,7 @@ const ServiceCard = ({ title, index, icon }) => {
 
 const About = () => {
   return (
-    <div className="w-full h-screen p-2 flex flex-col py-16 bg-gradient-to-t from-gray-dark to-black bg-cover">
+    <div className="w-full h-screen flex flex-col bg-gradient-to-t from-gray-dark to-black bg-cover">
       <div className="max-w-[1450px] m-auto xmd:grid md:grid-cols-2 gap-8">
         <div className="col-span-1 m-2 items-center">
           <motion.div variants={textVariant()}>

@@ -54,7 +54,7 @@ const ExperienceCard = ({ experience }) => (
 
 const Experience = () => {
   return (
-    <>
+    <div className="w-full h-screen">
       {/* Our initial title and more for the page*/}
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>What I Have Done</p>
@@ -68,7 +68,7 @@ const Experience = () => {
           ))}
         </VerticalTimeline>
       </div>
-    </>
+    </div>
   );
 };
 

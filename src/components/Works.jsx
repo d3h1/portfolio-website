@@ -39,7 +39,7 @@ const ProjectCard = ({index, name, description, tags,
           {/* How we are setting up our project descriptions */}
           <div className='mt-5'>
             <h3 className='text-white font-bold text-[24px]'>{name}</h3>
-            <p className='mt-2 text-secondary text-[14px]'>{description}</p>
+            <p className='mt-2 text-violet-600 text-[14px]'>{description}</p>
           </div>
           {/* How we are setting up project categories */}
           <div className='mt-4 flex flex-wrap gap-2'>
@@ -58,7 +58,7 @@ const ProjectCard = ({index, name, description, tags,
 // This dynamically loads our projects and the previous description I have written for the section
 const Works = () => {
   return (
-    <>
+    <div className="w-full h-screen mt-20">
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>My Work</p>
         <h2 className={styles.sectionHeadText}>Projects.</h2>
@@ -82,7 +82,7 @@ const Works = () => {
           <ProjectCard key={`project=${index}`} index={index} {...project} />
         ))}
       </div>
-    </>
+    </div>
   );
 };
 
