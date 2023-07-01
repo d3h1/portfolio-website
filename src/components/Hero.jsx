@@ -73,19 +73,19 @@ const Hero = () => {
             DESIGN | DEVELOP | DEPLOY
           </h4>
           <div className="flex flex-row my-6">
-            <div className="rounded-button bg-gray-dark mx-6">
+            <a href="https://linkedin.com/in/deni-cabaravdic/" className="rounded-button bg-gray-dark mx-6">
               <FaLinkedin size={26} />
-            </div>
-            <div className="rounded-button bg-gray-dark mx-6">
+            </a>
+            <a href="https://github.com/d3h1" className="rounded-button bg-gray-dark mx-6">
               <FaGithub size={26} />
-            </div>
+            </a>
             <div className="rounded-button bg-gray-dark mx-6">
               <AiOutlineMail size={26} />
             </div>
           </div>
         </div>
       </div>
-      <div className="xsm:hidden sm:flex absolute xsm:bottom-8 bottom-6 w-full justify-center items-center">
+      <div className="xsm:hidden md:flex absolute xsm:bottom-8 bottom-6 w-full justify-center items-center">
         {/* We will link our framer motion animation to the about page so we can go to that on the scroll button */}
         <a href="#about">
           <div className="w-[35px] h-[64px] rounded-3xl border-4 border-violet-600/50 flex justify-center md:hover:translate-y-1 active:scale-95 items-start p-2">

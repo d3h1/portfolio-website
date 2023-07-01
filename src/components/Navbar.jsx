@@ -33,8 +33,8 @@ const Navbar = () => {
 
   return (
     <nav
-      className={` w-full fixed items-center py-5 top-0 xsm:h-[70px] md:h-24 xsm:shadow-none sm:shadow-md shadow-black z-[100] ease-in duration-500 ${
-        scrolled ? "bg-primary" : "bg-transparent"
+      className={` w-full fixed items-center py-5 top-0 xsm:h-[50px] md:h-24 xsm:shadow-none sm:shadow-lg shadow-black z-[100] ease-in duration-500 ${
+        scrolled ? "bg-zinc-900" : "bg-transparent"
       }`}
     >
       {/* Navbar */}
@@ -67,7 +67,7 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-        <div className="md:hidden cursor-pointer">
+        <div className="xsm: flex md:hidden cursor-pointer">
           <AiOutlineMenu
             onClick={handleNav}
             className="active:scale-95"
@@ -85,55 +85,60 @@ const Navbar = () => {
       >
         {/* Sidebar */}
         <div className={nav ? "sidebar-open" : "sidebar-closed"}>
-          <div className="flex justify-between w-full items-center">
-            <Link
-              to="/"
-              className="flex items-center gap-2 hover:translate-y-1 active:scale-95"
-              onClick={() => {
-                setActive("");
-                window.scrollTo(0, 0);
-              }}
-            >
-              <img src={logo} alt="logo" className="w-12 h-12 object-contain" />
-              
-            </Link>
-            <div className="rounded-button">
-              <AiOutlineClose onClick={handleNav} size={22} />
-            </div>
-          </div>
-          <div className="border-b border-violet-600/60 my-4 flex items-center justify-center">
-            <p className="py-4 tracking-wide uppercase font-light xsm:text-sm sm:text-sm md:text-base">
-              DESIGN | DEVELOP | DEPLOY
-            </p>
-            <div className="flex flex-row my-6">
-            <div className="rounded-button bg-gray-dark mx-6">
-              <FaLinkedin size={26} />
-            </div>
-            <div className="rounded-button bg-gray-dark mx-6">
-              <FaGithub size={26} />
-            </div>
-            <div className="rounded-button bg-gray-dark mx-6">
-              <AiOutlineMail size={26} />
-            </div>
-          </div>
-          </div>
-
-          <ul className="flex flex-col">
-            {navLinks.map((nav) => (
-              <li
-                key={nav.id}
-                className={`font-poppins font-medium cursor-pointer text-[16px] sm:py-6 xsm:py-4 ${
-                  active === nav.title ? "text-violet-600" : "text-white"
-                }`}
+          <div className="flex flex-col">
+            <div className="flex justify-between w-full items-center">
+              <Link
+                to="/"
+                className="flex items-center active:scale-90"
                 onClick={() => {
-                  setToggle(!toggle);
-                  setActive(nav.title);
+                  setActive("");
+                  window.scrollTo(0, 0);
                 }}
               >
-                <a href={`#${nav.id}`}>{nav.title}</a>
-              </li>
-            ))}
-          </ul>
+                <img
+                  src={logo}
+                  alt="logo"
+                  className="w-12 h-12 object-contain"
+                />
+              </Link>
+              <div className="rounded-button">
+                <AiOutlineClose onClick={handleNav} size={22} />
+              </div>
+            </div>
+            <div className="border-b border-violet-600/60 my-4 flex items-center justify-center">
+              <p className="py-4 tracking-wide uppercase font-light xsm:text-sm sm:text-sm md:text-base">
+                DESIGN | DEVELOP | DEPLOY
+              </p>
+            </div>
+
+            <ul className="flex flex-col">
+              {navLinks.map((nav) => (
+                <li
+                  key={nav.id}
+                  className={`font-poppins active:scale-90 font-medium cursor-pointer text-[16px] sm:py-6 xsm:py-4 ${
+                    active === nav.title ? "text-violet-600" : "text-white"
+                  }`}
+                  onClick={() => {
+                    setToggle(!toggle);
+                    setActive(nav.title);
+                  }}
+                >
+                  <a href={`#${nav.id}`}>{nav.title}</a>
+                </li>
+              ))}
+            </ul>
+            <div className="flex flex-row my-6">
+              <a href="https://linkedin.com/in/deni-cabaravdic/" className="rounded-button bg-gray-dark mx-4">
+                <FaLinkedin size={26} />
+              </a>
+              <a href="https://github.com/d3h1" className="rounded-button bg-gray-dark mx-4">
+                <FaGithub size={26} />
+              </a>
+              <a href="https://linkedin.com" className="rounded-button bg-gray-dark mx-4">
+                <AiOutlineMail size={26} />
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </nav>

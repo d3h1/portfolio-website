@@ -54,19 +54,23 @@ const ExperienceCard = ({ experience }) => (
 
 const Experience = () => {
   return (
-    <div className="w-full h-screen">
-      {/* Our initial title and more for the page*/}
-      <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>What I Have Done</p>
-        <h2 className={styles.sectionHeadText}>Work Experience</h2>
-      </motion.div>
+    <div className="page-container">
+      <div className="max-w-[1450px] m-auto">
+        {/* Our initial title and more for the page*/}
+        <motion.div variants={textVariant()}>
+          <p className="uppercase text-xl tracking-widest text-violet-600">
+            experience
+          </p>
+          <h1 className="py-4">What I Do</h1>
+        </motion.div>
 
-      <div className="mt-20 flex flex-col">
-        <VerticalTimeline>
-          {experiences.map((experience, index) => (
-            <ExperienceCard key={index} experience={experience} />
-          ))}
-        </VerticalTimeline>
+        <div className="mt-20 flex flex-col">
+          <VerticalTimeline>
+            {experiences.map((experience, index) => (
+              <ExperienceCard key={index} experience={experience} />
+            ))}
+          </VerticalTimeline>
+        </div>
       </div>
     </div>
   );

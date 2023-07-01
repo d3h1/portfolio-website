@@ -28,7 +28,7 @@ h2 {
   @apply text-3xl sm:text-4xl;
 }
 body {
-  @apply bg-gray-dark text-[#ecf0f3] tracking-wide;
+  @apply bg-zinc-900 text-[#ecf0f3] tracking-wide;
 }
 button {
   @apply shadow-xl shadow-gray rounded-xl uppercase bg-gradient-to-r from-[#5651e5] to-[#709dff] text-white;
@@ -53,7 +53,7 @@ button {
   @apply cursor-pointer text-sm uppercase hover:border-b border-b-violet-600 p-2;
 }
 .rounded-button {
-  @apply border border-gray-dark rounded-full p-2 shadow-sm shadow-violet-600 cursor-pointer hover:border-violet-600/80 active:scale-95;
+  @apply border border-gray-dark rounded-full p-2 shadow-sm shadow-violet-600 cursor-pointer hover:border-violet-600/80 active:scale-90;
 }
 
 /* Attributes */

@@ -7,10 +7,10 @@ import { Tilt } from "react-tilt";
 const Tech = () => {
   const TechCard = ({ title, index, icon }) => {
     return (
-      <Tilt className="">
+      <Tilt className="xsm:w-[100px] xmd:w-[150px] m-2">
         <motion.div
           variants={fadeIn("left", "spring", 0.5 * index, 0.50)}
-          className="bg-gradient-to-b from-violet-800/40 to-transparent p-[1px] rounded-[20px] shadow-md shadow-black"
+          className="bg-gradient-to-b from-violet-800/40 to-transparent p-[1px] rounded-[20px]  shadow-md shadow-black"
         >
           <div
             options={{
@@ -32,17 +32,17 @@ const Tech = () => {
   };
 
   return (
-    <div className="w-full h-screen flex">
-      <div className="max-w-[1450px] m-auto xmd:grid md:grid-cols-2 gap-8">
+    <div className="w-full xsm:h-full md:h-screen flex ">
+      <div className="max-w-[1450px] m-auto xmd:grid md:grid-cols-2 gap-8 items-center justify-center">
         {/* We are using technologies.map to output different technologies I know */}
-        <div className=" col-span-1 flex-wrap flex gap-10 items-center">
+        <div className=" md:col-span-1 flex-wrap flex  xsm:gap-20 md:gap-20 items-center">
           {technologies.map((technology, index) => (
-            <div className="w-28 h-24" key={technology.title}>
+            <div className="w-20 h-16" key={technology.title}>
               <TechCard key={technology.title} index={index} {...technology} />
             </div>
           ))}
         </div>
-        <div className="col-span-1 my-2 items-center">
+        <div className="md:col-span-1 my-6 items-center">
           <motion.div variants={textVariant()}>
             <p className="uppercase text-xl tracking-widest text-violet-600">
               technologies
