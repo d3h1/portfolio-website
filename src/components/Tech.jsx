@@ -7,10 +7,10 @@ import { Tilt } from "react-tilt";
 const Tech = () => {
   const TechCard = ({ title, index, icon }) => {
     return (
-      <Tilt className="xsm:w-[100px] m-2">
+      <Tilt className="xsm:w-[100px]">
         <motion.div
-          variants={fadeIn("left", "spring", 0.5 * index, 0.5)}
-          className="bg-gradient-to-b from-violet-800/40 to-transparent p-[1px] rounded-[20px]  shadow-md shadow-black"
+          variants={fadeIn("right", "spring", 0.5 * index, 0.5)}
+          className="bg-gradient-to-b from-violet-800/40 to-transparent rounded-[20px] shadow-md shadow-black"
         >
           <div
             options={{
@@ -18,7 +18,7 @@ const Tech = () => {
               scale: 1,
               speed: 450,
             }}
-            className=" rounded-[20px] p-3 flex justify-evenly items-center flex-col"
+            className=" rounded-[20px] p-2 flex justify-evenly items-center flex-col"
           >
             <img
               src={icon}
@@ -33,34 +33,18 @@ const Tech = () => {
 
   return (
     <div className="w-full xsm:h-full md:h-screen flex">
-      <div className="max-w-[1200px] m-auto xmd:grid md:grid-cols-2 gap-8 items-center justify-center">
-        <div className="xsm:flex md:hidden flex-col col-span-1 my-6">
+      <div className="max-w-[1200px] m-auto xmd:grid md:grid-cols-2 gap-8">
+        <div className="col-span-1 m-2 items-center">
           <motion.div variants={textVariant()}>
             <p className="uppercase text-xl tracking-widest text-violet-600">
               technologies
             </p>
             <h1 className="py-4">What I Use</h1>
           </motion.div>
-        </div>
-        
-        {/* We are using technologies.map to output different technologies I know */}
-        <div className=" col-span-1 flex-wrap flex  xsm:gap-20 md:gap-20 justify-center items-center w-[400px]">
-          {technologies.map((technology, index) => (
-            <div className="w-20 h-16" key={technology.title}>
-              <TechCard key={technology.title} index={index} {...technology} />
-            </div>
-          ))}
-        </div>
-        <div className="xsm:hidden md:flex flex-col col-span-1 my-6 justify-center">
-          <motion.div variants={textVariant()}>
-            <p className="uppercase text-xl tracking-widest text-violet-600">
-              technologies
-            </p>
-            <h1 className="py-4">What I Use</h1>
-          </motion.div>
+
           <motion.p
             variants={fadeIn("", "", 0.1, 1)}
-            className="text-base tracking-widest py-5 xsm:hidden md:flex"
+            className="xsm:hidden md:flex text-base tracking-widest py-5"
           >
             I collaborate closely with other programmers and am able to learn
             quickly when faced with challenges. Developing efficient and
@@ -70,6 +54,14 @@ const Tech = () => {
             with other engineers is always in the works!
           </motion.p>
         </div>
+      </div>
+      {/* We are using technologies.map to output different technologies I know */}
+      <div className="col-span-1 mt-20 flex flex-wrap gap-10 justify-center md:w-[400px] xmd:[300px]">
+        {technologies.map((technology, index) => (
+          <div className="w-20 h-16" key={technology.title}>
+            <TechCard key={technology.title} index={index} {...technology} />
+          </div>
+        ))}
       </div>
     </div>
   );

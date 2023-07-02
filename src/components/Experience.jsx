@@ -55,7 +55,7 @@ const ExperienceCard = ({ experience }) => (
 const Experience = () => {
   return (
     <div className="page-container">
-      <div className="max-w-[1450px] m-auto">
+      <div className="">
         {/* Our initial title and more for the page*/}
         <motion.div variants={textVariant()}>
           <p className="uppercase text-xl tracking-widest text-violet-600">
