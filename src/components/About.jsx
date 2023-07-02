@@ -33,7 +33,7 @@ const ServiceCard = ({ title, index, icon }) => {
 const About = () => {
   return (
     <div className="w-full xsm:h-full md:h-screen flex flex-col bg-gradient-to-t from-zinc-900 to-black bg-cover">
-      <div className="max-w-[1450px] m-auto xmd:grid md:grid-cols-2 gap-8">
+      <div className="max-w-[1200px] m-auto xmd:grid md:grid-cols-2 gap-8">
         <div className="col-span-1 m-2 items-center">
           <motion.div variants={textVariant()}>
             <p className="uppercase text-xl tracking-widest text-violet-600">
@@ -70,7 +70,6 @@ const About = () => {
           ))}
         </div>
       </div>
-      
     </div>
   );
 };

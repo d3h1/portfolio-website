@@ -85,10 +85,10 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <div className="xsm:hidden md:flex absolute xsm:bottom-8 bottom-6 w-full justify-center items-center">
+      <div className="xsm:hidden sm:flex absolute xsm:bottom-8 sm:bottom-6 w-full justify-center items-center">
         {/* We will link our framer motion animation to the about page so we can go to that on the scroll button */}
         <a href="#about">
-          <div className="w-[35px] h-[64px] rounded-3xl border-4 border-violet-600/50 flex justify-center md:hover:translate-y-1 active:scale-95 items-start p-2">
+          <div className="sm:w-[30px] sm:h-[50px] md:w-[35px] md:h-[64px] rounded-3xl border-4 border-violet-600/50 flex justify-center md:hover:translate-y-1 active:scale-95 items-start p-2">
             {/* This is how we use framer motion to create a scrolling gif for users to go to the next page */}
             <motion.div
               animate={{
@@ -99,7 +99,7 @@ const Hero = () => {
                 repeat: Infinity,
                 repeatType: "loop",
               }}
-              className="w-3 h-3 rounded-full bg-violet-600/50 mb-1"
+              className="sm:w-2 sm:h-2 md:w-3 md:h-3 rounded-full bg-violet-600/50 "
             />
           </div>
         </a>
