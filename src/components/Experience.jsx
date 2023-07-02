@@ -61,10 +61,10 @@ const Experience = () => {
           <p className="uppercase text-xl tracking-widest text-violet-600">
             experience
           </p>
-          <h1 className="py-4">What I Do</h1>
+          <h1 className="pt-4">My Work</h1>
         </motion.div>
 
-        <div className="mt-20 flex flex-col">
+        <div className="mt-6 flex flex-col">
           <VerticalTimeline>
             {experiences.map((experience, index) => (
               <ExperienceCard key={index} experience={experience} />

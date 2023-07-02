@@ -37,31 +37,24 @@ const Tech = () => {
         <div className="col-span-1 m-2 items-center">
           <motion.div variants={textVariant()}>
             <p className="uppercase text-xl tracking-widest text-violet-600">
-              technologies
+              technologies in
             </p>
-            <h1 className="py-4">What I Use</h1>
+            <h1 className="py-4">My Toolbox</h1>
           </motion.div>
 
           <motion.p
             variants={fadeIn("", "", 0.1, 1)}
             className="xsm:hidden md:flex text-base tracking-widest py-5"
           >
-            I collaborate closely with other programmers and am able to learn
-            quickly when faced with challenges. Developing efficient and
-            scalable applications is something I do on a daily basis
-            consistently providing results. With that in mind, learning the
-            newest technologies is necessary, so building projects and engaging
-            with other engineers is always in the works!
+            I use a vast tool box of technologies and 
           </motion.p>
         </div>
-      </div>
-      {/* We are using technologies.map to output different technologies I know */}
-      <div className="col-span-1 mt-20 flex flex-wrap gap-10 justify-center md:w-[400px] xmd:[300px]">
-        {technologies.map((technology, index) => (
-          <div className="w-20 h-16" key={technology.title}>
-            <TechCard key={technology.title} index={index} {...technology} />
-          </div>
-        ))}
+        {/* We are using technologies.map to output different technologies I know */}
+        <div className="col-span-1 mt-5 mb-10 mx-1 flex flex-wrap gap-10 justify-center items-center  xmd:w-[450px]">
+          {technologies.map((technology, index) => (
+              <TechCard key={technology.title} index={index} {...technology} />
+          ))}
+        </div>
       </div>
     </div>
   );

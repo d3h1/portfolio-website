@@ -39,7 +39,7 @@ const About = () => {
             <p className="uppercase text-xl tracking-widest text-violet-600">
               About
             </p>
-            <h1 className="py-4">Who I Am</h1>
+            <h1 className="py-4">My Expertise</h1>
           </motion.div>
 
           <motion.p
