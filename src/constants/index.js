@@ -280,7 +280,7 @@ import {
       source_code_link: "https://github.com/d3h1/Stock-Prediction-Application",
     },
     {
-      name: "Embedded Thermal Management System",
+      name: "Thermal Management",
       description:
         "Created an embedded thermal management system that runs fans based on the temperature of a server room. Used C# to talk to main processing units, while python and circuit python was used for fan controls. Html and javascript is used for web gui integration to get control on multiple devices. ",
       tags: [
@@ -316,10 +316,6 @@ import {
         {
           name: "python",
           color: "blue-text-gradient",
-        },
-        {
-          name: "c#",
-          color: "pink-text-gradient",
         },
         {
           name: "c++",

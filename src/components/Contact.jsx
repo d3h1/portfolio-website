@@ -1,7 +1,6 @@
 import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
-import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 
@@ -69,8 +68,10 @@ const Contact = () => {
         variants={slideIn("left", "tween", 0.2, 1)}
         className="flex-[0.75px] bg-black-100 p-8 rounded-2xl"
       >
-        <p className={styles.sectionSubText}>Get In Touch</p>
-        <h3 className={styles.sectionHeadText}>Contact.</h3>
+        <p className="uppercase text-xl tracking-widest text-violet-600">
+          get in touch
+        </p>
+        <h1 className="py-4">Contact Me</h1>
 
         <form
           ref={formRef}
@@ -123,8 +124,6 @@ const Contact = () => {
           </button>
         </form>
       </motion.div>
-
-      
     </div>
   );
 };
