@@ -147,7 +147,7 @@ import {
     {
       name: "Yelp Clone",
       description:
-        "Web-based platform that allows users to rate restaurants while also checking their price, adding their own restaurants, and deleting them. Looking to update it further with features such as location via googlemaps.api.",
+        "Web-based platform that allows users to rate, add, and delete restaurants while also checking their price, adding their own restaurants, and deleting them. Looking to update it further with features such as location via googlemaps.api.",
       tags: [
         {
           name: "reactjs",

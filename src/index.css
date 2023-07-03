@@ -31,7 +31,7 @@ body {
   @apply bg-zinc-900 text-[#ecf0f3] tracking-wide;
 }
 button {
-  @apply shadow-xl shadow-gray rounded-xl uppercase bg-gradient-to-r from-[#5651e5] to-[#709dff] text-white;
+  @apply shadow-sm p-1 mt-5 shadow-zinc-400 rounded-xl uppercase bg-gradient-to-r from-black-100 to-black-200 text-white;
 }
 
 .page-container {

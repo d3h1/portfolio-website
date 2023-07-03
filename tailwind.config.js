@@ -41,10 +41,11 @@ module.exports = {
       },
 
       screens: {
-        xsm: '100px',
+        xsm: '320px',
         sm: '380px',
         smd:'500px',
         md: '768px',
+        xxmd: '980px',
         xmd: '1009px',
         lg: '1293px',
         xl: '1440px',
