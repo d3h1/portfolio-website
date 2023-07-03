@@ -34,10 +34,10 @@ const Tech = () => {
   return (
     <div className="w-full xsm:h-full md:h-screen flex">
       <div className="max-w-[1200px] m-auto xmd:grid md:grid-cols-2 gap-8">
-        <div className="col-span-1 m-2 items-center">
+        <div className="col-span-1 mx-2 items-center ">
           <motion.div variants={textVariant()}>
             <p className="uppercase text-xl tracking-widest text-violet-600">
-              technologies in
+              technology in
             </p>
             <h1 className="py-4">My Toolbox</h1>
           </motion.div>
@@ -46,13 +46,25 @@ const Tech = () => {
             variants={fadeIn("", "", 0.1, 1)}
             className="xsm:hidden md:flex text-base tracking-widest py-5"
           >
-            I use a vast tool box of technologies and 
+            As a software engineer, my toolbox—comprising languages like Python,
+            C#, C++, JavaScript, and TypeScript—drives my daily operations. I
+            lean on frameworks such as ReactJS and NextJS to streamline my work.
+          </motion.p>
+          <motion.p
+            variants={fadeIn("", "", 0.1, 1)}
+            className="xsm:hidden md:flex text-base tracking-widest py-5"
+          >
+            Git and Kubernetes ensure my software's consistency across
+            platforms, while AWS offers nearly limitless computational power.
+            This tangible collection is augmented by my problem-solving skills,
+            design understanding, and knowledge of algorithms—my invisible yet
+            essential tools.
           </motion.p>
         </div>
         {/* We are using technologies.map to output different technologies I know */}
-        <div className="col-span-1 mt-5 mb-10 mx-1 flex flex-wrap gap-10 justify-center items-center  xmd:w-[450px]">
+        <div className="col-span-1 mt-5 mb-10 mx-2 flex flex-wrap gap-10 justify-center items-center  xmd:w-[450px]">
           {technologies.map((technology, index) => (
-              <TechCard key={technology.title} index={index} {...technology} />
+            <TechCard key={technology.title} index={index} {...technology} />
           ))}
         </div>
       </div>

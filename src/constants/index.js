@@ -100,6 +100,21 @@ import {
   ];
   
   const experiences = [
+    
+    {
+      title: "Software Engineer",
+      company_name: "Walt Disney Studios",
+      icon: disney,
+      iconBg: "#E6DEDD",
+      date: "May 2022 - Present",
+      points: [
+        "Developing full-stack applications to create automated ecosystems across Walt Disney Studios.",
+        "Leveraging expertise in C#, Python, JavaScript, and more to create reliable and scalable solutions that streamline operations and improve productivity.",
+        "Collaborating with interdisciplinary teams to drive high-priority projects from conception to delivery while ensuring seamless integration with existing systems and workflows.",
+        "Producing robust and efficient front-end and back-end code to deliver exceptional user experiences. Monitoring and improving code quality, security, and performance.",
+        "Thriving in fast-paced environments, completing complex projects within demanding time frames using agile methodologies and effective communication to ensure success.",
+      ],
+    },
     {
       title: "WebGL Developer | Consultant",
       company_name: "Automated Design Solutions",
@@ -111,20 +126,6 @@ import {
         "Collaborating with clients to design engaging websites that reflect their brand and drive business growth.",
         "Implementing responsive design and cross-browser compatibility for seamless user experiences.",
         "Engineering innovative solutions for multiple business-related websites that differentiate clients from their competitors.",
-      ],
-    },
-    {
-      title: "Software | Systems Engineer",
-      company_name: "Walt Disney Studios",
-      icon: disney,
-      iconBg: "#E6DEDD",
-      date: "May 2022 - Present",
-      points: [
-        "Developing full-stack applications within embedded systems to create automated ecosystems across Walt Disney Studios.",
-        "Leveraging expertise in C#, Python, JavaScript, and more to create reliable and scalable solutions that streamline operations and improve productivity.",
-        "Collaborating with interdisciplinary teams to drive high-priority projects from conception to delivery while ensuring seamless integration with existing systems and workflows.",
-        "Producing robust and efficient front-end and back-end code to deliver exceptional user experiences. Monitoring and improving code quality, security, and performance.",
-        "Thriving in fast-paced environments, completing complex projects within demanding time frames using agile methodologies and effective communication to ensure success.",
       ],
     },
     {
