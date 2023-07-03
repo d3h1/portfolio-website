@@ -33,8 +33,8 @@ const Tech = () => {
 
   return (
     <div className="w-full xsm:h-full md:h-screen flex">
-      <div className="max-w-[1200px] m-auto xmd:grid md:grid-cols-2 gap-8">
-        <div className="col-span-1 mx-2 items-center ">
+      <div className="max-w-[1200px] m-auto xmd:grid xmd:grid-cols-2 gap-8">
+        <div className="col-span-1 items-center mx-8">
           <motion.div variants={textVariant()}>
             <p className="uppercase text-xl tracking-widest text-violet-600">
               technology in
@@ -62,7 +62,7 @@ const Tech = () => {
           </motion.p>
         </div>
         {/* We are using technologies.map to output different technologies I know */}
-        <div className="col-span-1 mt-5 mb-10 mx-2 flex flex-wrap gap-10 justify-center items-center  xmd:w-[450px]">
+        <div className="col-span-1 flex flex-wrap gap-3 justify-center items-center xmd:w-[500px]">
           {technologies.map((technology, index) => (
             <TechCard key={technology.title} index={index} {...technology} />
           ))}
