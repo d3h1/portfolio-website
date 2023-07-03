@@ -73,10 +73,10 @@ const Hero = () => {
             DESIGN | DEVELOP | DEPLOY
           </h4>
           <div className="flex flex-row my-6">
-            <a href="https://linkedin.com/in/deni-cabaravdic/" className="rounded-button bg-gray-dark mx-6">
+            <a href="https://linkedin.com/in/deni-cabaravdic/" target="_blank" className="rounded-button bg-gray-dark mx-6">
               <FaLinkedin size={26} />
             </a>
-            <a href="https://github.com/d3h1" className="rounded-button bg-gray-dark mx-6">
+            <a href="https://github.com/d3h1" target="_blank" className="rounded-button bg-gray-dark mx-6">
               <FaGithub size={26} />
             </a>
             <div className="rounded-button bg-gray-dark mx-6">

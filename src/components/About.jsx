@@ -52,7 +52,7 @@ const About = () => {
           </motion.p>
           <motion.p
             variants={fadeIn("", "", 0.1, 1)}
-            className="text-base tracking-widest py-5"
+            className="text-base tracking-widest py-10"
           >
             I collaborate closely with other programmers and am able to learn
             quickly when faced with challenges. Developing efficient and
