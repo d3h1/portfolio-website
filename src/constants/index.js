@@ -1,5 +1,5 @@
 import {
-    mobile, backend, creator, web, javascript, typescript, html, css, reactjs,redux, aws, csharp, cpp, jenkins, mysql, python, sass, npm, tailwind, nodejs, mongodb, git, figma, docker,  disney, freelance, startup,threejs, yelpclone, portfolio, sudoku, stocks, ai, tmanage, money, githubprof,
+    mobile, backend, creator, web, javascript, typescript, html, css, reactjs,redux, aws, csharp, cpp, jenkins, mysql, python, sass, npm, tailwind, nodejs, mongodb, git, figma, docker,  disney, freelance, startup,threejs, yelpclone, portfolio, sudoku, stocks, ai, tmanage, money, githubprof, image
   } from "../assets";
   
   export const navLinks = [
@@ -116,8 +116,8 @@ import {
       ],
     },
     {
-      title: "WebGL Developer | Consultant",
-      company_name: "Automated Design Solutions",
+      title: "Software Engineer | Consultant",
+      company_name: "Intelligent Design Solutions",
       icon: startup,
       iconBg: "#E6DEDD",
       date: "March 2023 - Present",
@@ -237,25 +237,29 @@ import {
       source_code_link: "https://github.com/d3h1/facemesh",
     },
     {
-      name: "Credit Card Validation",
+      name: "AI Image Creation",
       description:
-        "Practicing my algorithms with a C++ program that helps validate a users credit card numbers. Looking to implement other feature such as member IDs, security passwords, and then a login page plus more. ",
+        "Using NodeJs, ReactJs, Express, and MongoDB to create a community site where users can use an amazing API from OpenAI to create their own images with their own words.",
       tags: [
         {
-          name: "algorithms",
+          name: "nodejs",
           color: "blue-text-gradient",
         },
         {
-          name: "C++",
+          name: "reactjs",
           color: "green-text-gradient",
         },
         {
-          name: "threejs",
+          name: "express",
           color: "blue-text-gradient",
         },
+        {
+          name: "mongodb",
+          color: "pink-text-gradient",
+        },
       ],
-      image: money,
-      source_code_link: "https://github.com/d3h1/credit-card-validation",
+      image: image,
+      source_code_link: "https://imagecreation.online",
     },
     {
       name: "Stock Prediction",

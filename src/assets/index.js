@@ -42,6 +42,7 @@ import ai from "./ai.png";
 import money from "./money.png";
 import tmanage from "./tmanage.png";
 import githubprof from "./githubprof.png";
+import image from './image.png'
 
 export {
   logo,
@@ -84,4 +85,5 @@ export {
   tmanage,
   money,
   githubprof,
+  image
 };
