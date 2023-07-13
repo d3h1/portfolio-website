@@ -62,7 +62,7 @@ const Contact = () => {
   };
 
   return (
-    <div className=" w-full xsm:h-full md:h-screen md:mt-[475px] flex flex-col items-start justify-start overflow-hidden">
+    <div className=" w-full xsm:h-full md:h-screen flex flex-col items-start justify-start overflow-hidden">
       <div className="max-w-[1200px] m-auto w-full">
         <div className="flex ">
           <motion.div className="mx-8" variants={textVariant()}>

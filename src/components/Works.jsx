@@ -72,7 +72,7 @@ const ProjectCard = ({
 // This dynamically loads our projects and the previous description I have written for the section
 const Works = () => {
   return (
-    <div className="w-full xsm:h-full md:h-screen flex mt-10 xsm:mb-16 smd:mb-80 md:mb-54 xxmd:mb-28 xmd:mb-0">
+    <div className="w-full xsm:h-full md:h-screen flex mt-10 xsm:mb-16 smd:mb-80">
       <div className="max-w-[1200px] m-auto">
         <div className="flex flex-col mx-8">
           <motion.div variants={textVariant()}>
